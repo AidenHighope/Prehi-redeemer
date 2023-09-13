@@ -3,24 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
-
-    <title>Prehistoria Redeemer</title>
+    
+    <title>Prehi redeemer</title>
 </head>
-
-<header>
-    <p>temp</p>
-</header>
-
 <body>
-    <div class="main">
-        <div class="item-list-container">
-            <ul>
-                <li>test</li><button class="sell">sell</button><button class="stash">stash</button>
-                <li>test</li><button class="sell">sell</button><button class="stash">stash</button>
+    <header>
+        <h1>le header™</h1>
+    </header>
 
-            </ul>
-        </div>
-    </div>
+    <section class="item-tables">
+        <table  id="itemsData">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                   <td>broken bow string</td>
+                   <td>20</td>
+                   <td><button onclick="sellItem(0)">Sell</button></td> 
+                   <td><button onclick="addToStash(0)">Stash</button></td> 
+                </tr>
+                <tr>
+                    <td>cave bear claws</td>
+                    <td>100</td>
+                    <td><button onclick="sellItem(1)">Sell</button></td> 
+                    <td><button onclick="addToStash(1)">Stash</button></td> 
+                 </tr>
+                 <tr>
+                    <td>chimeric pelt</td>
+                    <td>800</td>
+                    <td><button onclick="sellItem(2)">Sell</button></td> 
+                    <td><button onclick="addToStash(2)">Stash</button></td> 
+                 </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <p><strong>Admin comment:</strong></p>
+        <p><strong>Items:</strong></p>
+        <table id="subtotal">
+            <thead></thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <label for="subTot-beads">subtotal:</label>
+        <input type="text" id="subTot-beads" disabled>
+        <button id="clear" onclick="ClearComment()">clear comment</button>
+    </section>
+
+    <section>
+        <label for="total-beads"><strong>Total beads:</strong></label>
+        <input type="text" id="total-beads" disabled>
+        <p><strong>Total Stashed Items:</strong></p>
+        <table id="stashed-items">
+            <thead></thead>
+            <tbody>
+            </tbody>
+        </table>
+    </section>
+
+
+
+    <footer>
+        
+    </footer>
+    <script src="redeemer-v3.js"></script>
 </body>
 </html>
