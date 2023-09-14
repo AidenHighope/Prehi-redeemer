@@ -2,3 +2,84 @@ html
 {
     font-family: 'Comfortaa';
 }
+
+h1
+{
+    font-family: 'Neucha';
+    text-transform: capitalize;
+    text-align: center;
+    color: white;
+}
+
+.inline
+{
+    display: flex;
+}
+
+header
+{
+    background-color: #3c3434;
+
+}
+
+body
+{
+    background-color: #ac8563;
+}
+
+#displayButton
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:10px;
+}
+
+section
+{
+    background-color: #b89779;
+    border: 2px solid #3c3434;
+    border-radius: 10px;
+    margin:1%;
+    padding: 1%;
+    height: fit-content;
+}
+
+button
+{
+    background-color: #c1a58b;
+    color: #5f1c01;
+    border: 2px solid #3c3434;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 5px;
+    margin:0 ;
+   
+}
+
+
+button:hover
+{
+    background-color:#927a63;
+    color: white;
+}
+
+
+.flex-container
+{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: fit-content;
+}
+
+table
+{
+    text-transform: lowercase;
+}
+
+.hide {
+    display: none;
+  }

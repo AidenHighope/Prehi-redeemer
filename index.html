@@ -5,13 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
-    
+    <link href='https://fonts.googleapis.com/css?family=Neucha' rel='stylesheet'>
+
     <title>Prehi redeemer</title>
 </head>
 <body>
     <header>
-        <h1>le header™</h1>
+        <h1>Aiden's Redeemer™</h1>
+        <div id="displayButton">
+            <button data-category="hunting" onclick="toggleItems('hunting')">Hunting items</button>
+            <button data-category="fishing" onclick="toggleItems('fishing')">Fishing items</button>
+            <button data-category="discovery" onclick="toggleItems('discovery')">disco items</button>
+            <button data-category="foraging" onclick="toggleItems('foraging')">foraging items</button>
+            <button data-category="telt" onclick="toggleItems('telt')">Telt exp items</button>
+            <button data-category="companions" onclick="toggleItems('companions')">companions</button>
+            <button data-category="event" onclick="toggleItems('event')">event</button>
+            <button data-category="tack" onclick="toggleItems('tack')">tack</button>
+            <button data-category="cosmetic" onclick="toggleItems('cosmetic')">cosmetic</button>
+            <button data-category="breeding" onclick="toggleItems('breeding')">breeding</button>
+            <button data-category="geno" onclick="toggleItems('geno')">Geno Alteration</button>
+            <button data-category="misc" onclick="toggleItems('misc')">misc</button>
+        </div>
     </header>
+<div class="flex-container">
 
     <section class="item-tables">
         <table  id="itemsData">
@@ -24,26 +40,366 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr class="hunting">
                    <td>broken bow string</td>
                    <td>20</td>
                    <td><button onclick="sellItem(0)">Sell</button></td> 
-                   <td><button onclick="addToStash(0)">Stash</button></td> 
+                   <td><button onclick="addToStash(0), addToStashRedeem(0)">Stash</button></td> 
                 </tr>
-                <tr>
+                <tr class="hunting">
+                    <td>mauled pelt</td>
+                    <td>40</td>
+                    <td><button onclick="sellItem(1)">Sell</button></td> 
+                    <td><button onclick="addToStash(1), addToStashRedeem(1)">Stash</button></td> 
+                 </tr>
+                 <tr class="hunting">
+                    <td>dewclaw</td>
+                    <td>60</td>
+                    <td><button onclick="sellItem(2)">Sell</button></td> 
+                    <td><button onclick="addToStash(2), addToStashRedeem(2)">Stash</button></td> 
+                 </tr>
+                 <tr class="hunting">
+                    <td>cloven hooves</td>
+                    <td>80</td>
+                    <td><button onclick="sellItem(3)">Sell</button></td> 
+                    <td><button onclick="addToStash(3), addToStashRedeem(3)">Stash</button></td> 
+                 </tr>
+
+                 <tr class="hunting">
                     <td>cave bear claws</td>
                     <td>100</td>
-                    <td><button onclick="sellItem(1)">Sell</button></td> 
-                    <td><button onclick="addToStash(1)">Stash</button></td> 
+                    <td><button onclick="sellItem(4)">Sell</button></td> 
+                    <td><button onclick="addToStash(4), addToStashRedeem(4)">Stash</button></td> 
                  </tr>
-                 <tr>
+                 <tr class="hunting">
+                    <td>warm wolf fur</td>
+                    <td>200</td>
+                    <td><button onclick="sellItem(5)">Sell</button></td> 
+                    <td><button onclick="addToStash(5), addToStashRedeem(5)">Stash</button></td> 
+                 </tr>
+                 <tr class="hunting">
+                    <td>handful of predator teeth</td>
+                    <td>230</td>
+                    <td><button onclick="sellItem(6)">Sell</button></td> 
+                    <td><button onclick="addToStash(6), addToStashRedeem(6)">Stash</button></td> 
+                 </tr>
+                 <tr class="hunting">
+                    <td>pristine lion fangs</td>
+                    <td>260</td>
+                    <td><button onclick="sellItem(7)">Sell</button></td> 
+                    <td><button onclick="addToStash(7), addToStashRedeem(7)">Stash</button></td> 
+                 </tr>
+                 <tr class="hunting">
+                    <td>elk pelt</td>
+                    <td>300</td>
+                    <td><button onclick="sellItem(8)">Sell</button></td> 
+                    <td><button onclick="addToStash(8), addToStashRedeem(8)">Stash</button></td> 
+                 </tr>
+                 <tr class="hunting">
+                    <td>striped pelt</td>
+                    <td>400</td>
+                    <td><button onclick="sellItem(9)">Sell</button></td> 
+                    <td><button onclick="addToStash(9), addToStashRedeem(9)">Stash</button></td> 
+                 </tr>
+                 <tr class="hunting">
+                    <td>silky albino fur</td>
+                    <td>450</td>
+                    <td><button onclick="sellItem(10)">Sell</button></td> 
+                    <td><button onclick="addToStash(10), addToStashRedeem(10)">Stash</button></td> 
+                 </tr>
+                 <tr class="hunting">
+                    <td>wooly rhino horn</td>
+                    <td>500</td>
+                    <td><button onclick="sellItem(11)">Sell</button></td> 
+                    <td><button onclick="addToStash(11), addToStashRedeem(11)">Stash</button></td> 
+                 </tr>
+                 <tr class="hunting">
+                    <td>cursed mammoth tusk</td>
+                    <td>700</td>
+                    <td><button onclick="sellItem(12)">Sell</button></td> 
+                    <td><button onclick="addToStash(12), addToStashRedeem(12)">Stash</button></td> 
+                 </tr>
+                 <tr class="hunting">
                     <td>chimeric pelt</td>
                     <td>800</td>
-                    <td><button onclick="sellItem(2)">Sell</button></td> 
-                    <td><button onclick="addToStash(2)">Stash</button></td> 
+                    <td><button onclick="sellItem(13)">Sell</button></td> 
+                    <td><button onclick="addToStash(13), addToStashRedeem(13)">Stash</button></td> 
                  </tr>
+                 <tr class="fishing">
+                    <td>coral</td>
+                    <td>20</td>
+                    <td><button onclick="sellItem(14)">Sell</button></td> 
+                    <td><button onclick="addToStash(14), addToStashRedeem(14)">Stash</button></td> 
+                 </tr>
+                 <tr class="fishing">
+                    <td>Eurypterid</td>
+                    <td>40</td>
+                    <td><button onclick="sellItem(15)">Sell</button></td> 
+                    <td><button onclick="addToStash(15), addToStashRedeem(15)">Stash</button></td> 
+                 </tr>
+                 <tr class="fishing">
+                    <td>succulent fish meat</td>
+                    <td>60</td>
+                    <td><button onclick="sellItem(16)">Sell</button></td> 
+                    <td><button onclick="addToStash(16), addToStashRedeem(16)">Stash</button></td> 
+                 </tr>
+                 <tr class="fishing">
+                    <td>black coelacanth</td>
+                    <td>80</td>
+                    <td><button onclick="sellItem(17)">Sell</button></td> 
+                    <td><button onclick="addToStash(17), addToStashRedeem(17)">Stash</button></td> 
+                 </tr>
+                 <tr class="fishing">
+                    <td>sabertooth salmon</td>
+                    <td>100</td>
+                    <td><button onclick="sellItem(18)">Sell</button></td> 
+                    <td><button onclick="addToStash(18), addToStashRedeem(18)">Stash</button></td> 
+                 </tr>
+              
+                 <tr class="fishing">
+                    <td>Ammonite Shell</td>
+                    <td>200</td>
+                    <td><button onclick="sellItem(19)">Sell</button></td> 
+                    <td><button onclick="addToStash(19), addToStashRedeem(19)">Stash</button></td> 
+                 </tr>
+                 <tr class="fishing">
+                    <td>Golden Coelacanth Scale</td>
+                    <td>200</td>
+                    <td><button onclick="sellItem(20)">Sell</button></td> 
+                    <td><button onclick="addToStash(20), addToStashRedeem(20)">Stash</button></td> 
+                 </tr>
+                 <tr class="fishing">
+                    <td>Large Shining Scale</td>
+                    <td>200</td>
+                    <td><button onclick="sellItem(21)">Sell</button></td> 
+                    <td><button onclick="addToStash(21), addToStashRedeem(21)">Stash</button></td> 
+                 </tr>
+                 <tr class="fishing">
+                    <td>Nothosaurus claw</td>
+                    <td>230</td>
+                    <td><button onclick="sellItem(22)">Sell</button></td> 
+                    <td><button onclick="addToStash(22), addToStashRedeem(22)">Stash</button></td> 
+                 </tr>
+                 <tr class="fishing">
+                    <td>Henodus shell</td>
+                    <td>260</td>
+                    <td><button onclick="sellItem(23)">Sell</button></td> 
+                    <td><button onclick="addToStash(23), addToStashRedeem(23)">Stash</button></td> 
+                 </tr>
+                 <tr class="fishing">
+                    <td>thalassomedon skull</td>
+                    <td>300</td>
+                    <td><button onclick="sellItem(24)">Sell</button></td> 
+                    <td><button onclick="addToStash(24), addToStashRedeem(24)">Stash</button></td> 
+                 </tr>
+                 <tr class="fishing">
+                    <td>opabinia</td>
+                    <td>400</td>
+                    <td><button onclick="sellItem(25)">Sell</button></td> 
+                    <td><button onclick="addToStash(25), addToStashRedeem(25)">Stash</button></td> 
+                 </tr>
+                 <tr class="fishing">
+                    <td>horseshoe crab shell</td>
+                    <td>450</td>
+                    <td><button onclick="sellItem(26)">Sell</button></td> 
+                    <td><button onclick="addToStash(26), addToStashRedeem(26)">Stash</button></td> 
+                 </tr>
+                 <tr class="fishing">
+                    <td>megalodon tooth</td>
+                    <td>500</td>
+                    <td><button onclick="sellItem(27)">Sell</button></td> 
+                    <td><button onclick="addToStash(27), addToStashRedeem(27)">Stash</button></td> 
+                 </tr>
+                 <tr class="fishing">
+                    <td>dunkleosteus</td>
+                    <td>700</td>
+                    <td><button onclick="sellItem(28)">Sell</button></td> 
+                    <td><button onclick="addToStash(28), addToStashRedeem(28)">Stash</button></td> 
+                 </tr>
+                 <tr class="fishing">
+                    <td>megalodon carcass</td>
+                    <td>800</td>
+                    <td><button onclick="sellItem(29)">Sell</button></td> 
+                    <td><button onclick="addToStash(29), addToStashRedeem(29)">Stash</button></td> 
+                 </tr>
+                 <tr class="discovery">
+                    <td>ochre</td>
+                    <td>20</td>
+                    <td><button onclick="sellItem(30)">Sell</button></td> 
+                    <td><button onclick="addToStash(30), addToStashRedeem(30)">Stash</button></td> 
+                 </tr>
+                 <tr class="discovery">
+                    <td>leather strips</td>
+                    <td>40</td>
+                    <td><button onclick="sellItem(31)">Sell</button></td> 
+                    <td><button onclick="addToStash(31), addToStashRedeem(31)">Stash</button></td> 
+                 </tr>
+                 <tr class="discovery">
+                    <td>sharpened flint</td>
+                    <td>60</td>
+                    <td><button onclick="sellItem(32)">Sell</button></td> 
+                    <td><button onclick="addToStash(32), addToStashRedeem(32)">Stash</button></td> 
+                 </tr>
+                 <tr class="discovery">
+                    <td>sinew rope</td>
+                    <td>80</td>
+                    <td><button onclick="sellItem(33)">Sell</button></td> 
+                    <td><button onclick="addToStash(33), addToStashRedeem(33)">Stash</button></td> 
+                 </tr>
+                 <tr class="discovery">
+                    <td>woven basket</td>
+                    <td>100</td>
+                    <td><button onclick="sellItem(34)">Sell</button></td> 
+                    <td><button onclick="addToStash(34), addToStashRedeem(34)">Stash</button></td> 
+                 </tr>
+                 <tr class="discovery">
+                    <td>assorted feathers</td>
+                    <td>200</td>
+                    <td><button onclick="sellItem(35)">Sell</button></td> 
+                    <td><button onclick="addToStash(35), addToStashRedeem(35)">Stash</button></td> 
+                 </tr>
+                 <tr class="discovery">
+                    <td>ancient jewelry</td>
+                    <td>230</td>
+                    <td><button onclick="sellItem(36)">Sell</button></td> 
+                    <td><button onclick="addToStash(36), addToStashRedeem(36)">Stash</button></td> 
+                 </tr>
+                 <tr class="discovery">
+                    <td>antler spear head</td>
+                    <td>260</td>
+                    <td><button onclick="sellItem(37)">Sell</button></td> 
+                    <td><button onclick="addToStash(37), addToStashRedeem(37)">Stash</button></td> 
+                 </tr>
+                 <tr class="discovery">
+                    <td>sturdy lumber</td>
+                    <td>300</td>
+                    <td><button onclick="sellItem(38)">Sell</button></td> 
+                    <td><button onclick="addToStash(38), addToStashRedeem(38)">Stash</button></td> 
+                 </tr>
+                 <tr class="discovery">
+                    <td>ancient metal ring</td>
+                    <td>400</td>
+                    <td><button onclick="sellItem(39)">Sell</button></td> 
+                    <td><button onclick="addToStash(39), addToStashRedeem(39)">Stash</button></td> 
+                 </tr>
+                 <tr class="discovery">
+                    <td>jagged tooth knife</td>
+                    <td>450</td>
+                    <td><button onclick="sellItem(40)">Sell</button></td> 
+                    <td><button onclick="addToStash(40), addToStashRedeem(40)">Stash</button></td> 
+                 </tr>
+                 <tr class="discovery">
+                    <td>obsidian blade</td>
+                    <td>500</td>
+                    <td><button onclick="sellItem(41)">Sell</button></td> 
+                    <td><button onclick="addToStash(41), addToStashRedeem(41)">Stash</button></td> 
+                 </tr>
+                 <tr class="discovery">
+                    <td>Moonsteel bar</td>
+                    <td>700</td>
+                    <td><button onclick="sellItem(42)">Sell</button></td> 
+                    <td><button onclick="addToStash(42), addToStashRedeem(42)">Stash</button></td> 
+                 </tr>
+                 <tr class="discovery">
+                    <td>skyfire diamond</td>
+                    <td>800</td>
+                    <td><button onclick="sellItem(43)">Sell</button></td> 
+                    <td><button onclick="addToStash(43), addToStashRedeem(43)">Stash</button></td> 
+                 </tr>
+                 <tr class="discovery">
+                    <td>golden sabertooth idol</td>
+                    <td>3000</td>
+                    <td><button onclick="sellItem(44)">Sell</button></td> 
+                    <td><button onclick="addToStash(44), addToStashRedeem(44)">Stash</button></td> 
+                 </tr>
+                 <tr class="foraging">
+                    <td>seeds</td>
+                    <td>20</td>
+                    <td><button onclick="sellItem(45)">Sell</button></td> 
+                    <td><button onclick="addToStash(45), addToStashRedeem(45)">Stash</button></td> 
+                 </tr>
+                 <tr class="foraging">
+                    <td>tomato</td>
+                    <td>40</td>
+                    <td><button onclick="sellItem(46)">Sell</button></td> 
+                    <td><button onclick="addToStash(46), addToStashRedeem(46)">Stash</button></td> 
+                 </tr>
+                 <tr class="foraging">
+                    <td>potato</td>
+                    <td>60</td>
+                    <td><button onclick="sellItem(47)">Sell</button></td> 
+                    <td><button onclick="addToStash(47), addToStashRedeem(47)">Stash</button></td> 
+                 </tr>
+                 <tr class="foraging">
+                    <td>chamomile</td>
+                    <td>80</td>
+                    <td><button onclick="sellItem(48)">Sell</button></td> 
+                    <td><button onclick="addToStash(48), addToStashRedeem(48)">Stash</button></td> 
+                 </tr>
+                 <tr class="foraging">
+                    <td>marigold</td>
+                    <td>100</td>
+                    <td><button onclick="sellItem(49)">Sell</button></td> 
+                    <td><button onclick="addToStash(49), addToStashRedeem(49)">Stash</button></td> 
+                 </tr>
+                 <tr class="foraging">
+                    <td>berries</td>
+                    <td>200</td>
+                    <td><button onclick="sellItem(50)">Sell</button></td> 
+                    <td><button onclick="addToStash(50), addToStashRedeem(50)">Stash</button></td> 
+                 </tr>
+                 <tr class="foraging">
+                    <td>apple</td>
+                    <td>230</td>
+                    <td><button onclick="sellItem(51)">Sell</button></td> 
+                    <td><button onclick="addToStash(51), addToStashRedeem(51)">Stash</button></td> 
+                 </tr>
+                 <tr class="foraging">
+                    <td>mint</td>
+                    <td>260</td>
+                    <td><button onclick="sellItem(52)">Sell</button></td> 
+                    <td><button onclick="addToStash(52), addToStashRedeem(52)">Stash</button></td> 
+                 </tr>
+                 <tr class="foraging">
+                    <td>aloe vera</td>
+                    <td>300</td>
+                    <td><button onclick="sellItem(53)">Sell</button></td> 
+                    <td><button onclick="addToStash(53), addToStashRedeem(53)">Stash</button></td> 
+                 </tr>
+                 <tr class="foraging">
+                    <td>catnip</td>
+                    <td>400</td>
+                    <td><button onclick="sellItem(54)">Sell</button></td> 
+                    <td><button onclick="addToStash(54), addToStashRedeem(54)">Stash</button></td> 
+                 </tr>
+                 <tr class="foraging">
+                    <td>parsnip</td>
+                    <td>450</td>
+                    <td><button onclick="sellItem(55)">Sell</button></td> 
+                    <td><button onclick="addToStash(55), addToStashRedeem(55)">Stash</button></td> 
+                 </tr>
+                 <tr class="foraging">
+                    <td>hawthorn</td>
+                    <td>500</td>
+                    <td><button onclick="sellItem(56)">Sell</button></td> 
+                    <td><button onclick="addToStash(56), addToStashRedeem(56)">Stash</button></td> 
+                 </tr>
+                 <tr class="foraging">
+                    <td>strawberries</td>
+                    <td>700</td>
+                    <td><button onclick="sellItem(57)">Sell</button></td> 
+                    <td><button onclick="addToStash(57), addToStashRedeem(57)">Stash</button></td> 
+                 </tr>
+                 <tr class="foraging">
+                    <td>cherries</td>
+                    <td>800</td>
+                    <td><button onclick="sellItem(58)">Sell</button></td> 
+                    <td><button onclick="addToStash(58), addToStashRedeem(58)">Stash</button></td> 
+                 </tr>
+
             </tbody>
         </table>
+        
     </section>
 
     <section>
@@ -55,22 +411,32 @@
 
             </tbody>
         </table>
-        <label for="subTot-beads">subtotal:</label>
-        <input type="text" id="subTot-beads" disabled>
+        <div class="inline">
+            <u>subtotal:</u>
+            <div id="subtotal-beads">0</div>
+        </div>
         <button id="clear" onclick="ClearComment()">clear comment</button>
     </section>
 
     <section>
-        <label for="total-beads"><strong>Total beads:</strong></label>
-        <input type="text" id="total-beads" disabled>
-        <p><strong>Total Stashed Items:</strong></p>
+        <div class="inline">
+            <strong>Total beads:</strong>
+            <div id="total-beads">0</div>
+        </div>
+        <p><strong>Total Stashed Items: </strong><button onclick="sortTable()">Sort items</button></p>
         <table id="stashed-items">
             <thead></thead>
             <tbody>
-            </tbody>
+                <tr>
+                    <td id="total-stashed-counter">x0</td>
+                    <td>Total Stashed Items</td>
+                </tr>
+             </tbody>
         </table>
     </section>
 
+
+</div>
 
 
     <footer>
