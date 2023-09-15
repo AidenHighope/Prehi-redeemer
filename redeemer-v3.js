@@ -146,7 +146,7 @@ function ClearComment() {
 //#region utilities
 function toggleItems(category) {
     //add new category here vvv
-    const allItems = document.querySelectorAll('.hunting, .fishing, .discovery, .foraging, .telt, .companions, .event, .tack, .cosmetic, .breeding, .geno, .misc');
+    const allItems = document.querySelectorAll('.hunting, .fishing, .discovery, .foraging, .telt, .companions, .event, .tack, .cosmetic, .breeding, .geno, .misc, .calendar, .reveal, .trait');
     const itemsToShow = document.querySelectorAll(`.${category}`);
   
     // Hide all items
